@@ -9,7 +9,7 @@ License: GPLv3
 Group: System/Cluster
 Source: http://ganeti.googlecode.com/files/%{name}-%{version}.tar.gz
 URL:	http://code.google.com/p/ganeti/
-BuildRequires: socat, pylint, python-simplejson, python-parsing, python-pyinotify, python-sphinx, python-curl
+BuildRequires: socat, pylint, python-simplejson, python-parsing, python-pyinotify, python-sphinx, python-curl, python-OpenSSL
 BuildRoot: %_tmppath/%{name}-%{version}-buildroot
 
 %description
