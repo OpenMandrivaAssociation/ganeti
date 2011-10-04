@@ -10,6 +10,7 @@ Group: System/Cluster
 Source: http://ganeti.googlecode.com/files/%{name}-%{version}.tar.gz
 URL:	http://code.google.com/p/ganeti/
 BuildRequires: socat, pylint, python-simplejson, python-parsing, python-pyinotify, python-sphinx, python-curl, python-OpenSSL
+BuildRequires: graphviz, python-paramiko
 BuildRoot: %_tmppath/%{name}-%{version}-buildroot
 
 %description
@@ -41,6 +42,7 @@ mkdir -p %{buildroot}/srv/%{name}/file-storage
 %files
 %defattr(0755,root,root)
 %_var/*
+%{python_sitearch}
 %{_libdir}
 /usr/sbin/
 %{_mandir}/man7
