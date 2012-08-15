@@ -1,5 +1,5 @@
 %define name ganeti
-%define version 2.5.2
+%define version 2.6.0
 
 Name: %{name}
 Summary: Ganeti is a cluster virtual server management software tool
@@ -48,11 +48,9 @@ mkdir -p %{buildroot}/srv/%{name}/file-storage
 %makeinstall
 
 %files
-%defattr(0755,root,root)
-%_var/*
 %{python_sitelib}
-%{_libdir}
-/usr/sbin/
+%{_sbindir}/g*
+%{_libdir}/%{name}
 %{_mandir}/man7
 %{_mandir}/man1
 %{_mandir}/man8
