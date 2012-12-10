@@ -54,3 +54,19 @@ mkdir -p %{buildroot}/srv/%{name}/file-storage
 %{_mandir}/man7
 %{_mandir}/man1
 %{_mandir}/man8
+
+
+%changelog
+* Wed Aug 15 2012 Alexander Khrukin <akhrukin@mandriva.org> 2.6.0-1mdv2012.0
++ Revision: 814893
+- version update 2.6.0
+
+* Thu Jul 26 2012 Alexander Khrukin <akhrukin@mandriva.org> 2.5.2-1
++ Revision: 811148
+- version update 2.5.2
+
+* Tue Oct 04 2011 Leonardo Coelho <leonardoc@mandriva.org> 2.4.4-1
++ Revision: 702949
+- first mandriva version
+- Created package structure for ganeti.
+
