@@ -1,7 +1,7 @@
 Name:    ganeti
 Summary: Cluster virtual server management software tool
 Version: 2.6.0
-Release: 2
+Release: 3
 License: GPLv3
 Group: System/Cluster
 Source0: http://ganeti.googlecode.com/files/%{name}-%{version}.tar.gz
