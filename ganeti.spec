@@ -1,3 +1,6 @@
+%define _enable_debug_packages %{nil}
+%define debug_package %{nil}
+
 Summary:	Ganeti is a cluster virtual server management software tool
 Name:		ganeti
 Version:	2.9.4
@@ -7,9 +10,19 @@ Group:		System/Cluster
 Source0:	http://ganeti.googlecode.com/files/%{name}-%{version}.tar.gz
 Url:		http://code.google.com/p/ganeti/
 BuildRequires:	ghc
+BuildRequires:	ghc-devel
+BuildRequires:	ghc-curl
+BuildRequires:	ghc-hslogger
+BuildRequires:	ghc-json
+BuildRequires:	ghc-mtl
+BuildRequires:	ghc-network
+BuildRequires:	ghc-parallel
+BuildRequires:	ghc-utf8-string
 BuildRequires:	graphviz
 BuildRequires:	pylint
+BuildRequires:	python-bitarray
 BuildRequires:	python-curl
+BuildRequires:	python-ipaddr
 BuildRequires:	python-OpenSSL
 BuildRequires:	python-paramiko
 BuildRequires:	python-parsing
@@ -20,7 +33,17 @@ BuildRequires:	python-sphinx
 BuildRequires:	qemu-img
 BuildRequires:	socat
 Requires:	qemu-img
-BuildArch:	noarch
+Requires:	pylint
+Requires:	python-bitarray
+Requires:	python-curl
+Requires:	python-ipaddr
+Requires:	python-OpenSSL
+Requires:	python-paramiko
+Requires:	python-parsing
+Requires:	python-pep8
+Requires:	python-pyinotify
+Requires:	python-simplejson
+Requires:	python-sphinx
 
 %description
 Ganeti is a cluster virtual server management software tool built on top of
@@ -39,6 +62,7 @@ hardware.
 
 %files
 %{python_sitelib}
+%{_bindir}/h*
 %{_sbindir}/g*
 %{_libdir}/%{name}
 %{_mandir}/man1/*.1*
@@ -52,9 +76,7 @@ hardware.
 
 %build
 export PATH=$PATH:/sbin/
-./configure \
-	--localstatedir=%{buildroot}%{_var} \
-	--sysconfdir=%{buildroot}%{_sysconfdir}
+%configure2_5x
 %make
 
 %install
