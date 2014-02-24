@@ -6,16 +6,21 @@ License:	GPLv3+
 Group:		System/Cluster
 Source0:	http://ganeti.googlecode.com/files/%{name}-%{version}.tar.gz
 Url:		http://code.google.com/p/ganeti/
-BuildArch:	noarch
+BuildRequires:	ghc
 BuildRequires:	graphviz
+BuildRequires:	pylint
 BuildRequires:	python-curl
 BuildRequires:	python-OpenSSL
 BuildRequires:	python-paramiko
 BuildRequires:	python-parsing
+BuildRequires:	python-pep8
 BuildRequires:	python-pyinotify
 BuildRequires:	python-simplejson
 BuildRequires:	python-sphinx
+BuildRequires:	qemu-img
 BuildRequires:	socat
+Requires:	qemu-img
+BuildArch:	noarch
 
 %description
 Ganeti is a cluster virtual server management software tool built on top of
