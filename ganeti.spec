@@ -32,6 +32,7 @@ BuildRequires:	python-simplejson
 BuildRequires:	python-sphinx
 BuildRequires:	qemu-img
 BuildRequires:	socat
+BuildRequires:	pkgconfig(libcurl)
 Requires:	qemu-img
 Requires:	pylint
 Requires:	python-bitarray
