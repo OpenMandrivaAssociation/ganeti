@@ -4,7 +4,7 @@
 Summary:	Ganeti is a cluster virtual server management software tool
 Name:		ganeti
 Version:	2.9.4
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		System/Cluster
 Source0:	http://ganeti.googlecode.com/files/%{name}-%{version}.tar.gz
