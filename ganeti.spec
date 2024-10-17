@@ -8,7 +8,7 @@ Release:	2
 License:	GPLv3+
 Group:		System/Cluster
 Source0:	http://ganeti.googlecode.com/files/%{name}-%{version}.tar.gz
-Url:		http://code.google.com/p/ganeti/
+Url:		https://code.google.com/p/ganeti/
 BuildRequires:	ghc
 BuildRequires:	ghc-devel
 BuildRequires:	ghc-curl
