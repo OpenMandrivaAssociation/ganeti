@@ -9,6 +9,11 @@ License:	GPLv3+
 Group:		System/Cluster
 Source0:	http://ganeti.googlecode.com/files/%{name}-%{version}.tar.gz
 Url:		https://code.google.com/p/ganeti/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	ghc
 BuildRequires:	ghc-devel
 BuildRequires:	ghc-curl
